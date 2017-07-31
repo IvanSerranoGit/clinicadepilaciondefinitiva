@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="http://webnovant.com">
+
+    <title>Soonweb Template - Documentation</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Lemon' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/highlight.min.css">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/highlight.min.js"></script>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+        
+        $(function () {
+            $('#affix_sidebar').affix({
+                offset: {
+                top: function () {
+                    return (this.top = $('.bs-docs-header').outerHeight(true))
+                }, 
+                bottom: function () {
+                    return (this.bottom = $('.bs-docs-footer').outerHeight(true))
+                }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+   
+
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="content">
+      <div class="container">
+          <div class="row">
+          <div class="col-md-12">
+            <h1>Soonweb <small>Template Documentation</small></h1>
+            <p>
+                Created: 06 February 2015<br>
+				Last modified: 26 October 2015<br>
+                By: Sergi Ruiz - <a href="http://webnovant.com">webnovant.com</a> - <a href="mailto:info@webnovant.com">info@webnovant.com</a><br>
+                <a href="http://webnovant.com/es/blog/recursos/soonweb-plantilla-gratuita-para-pagina-web-en-construccion">Updates & Download</a>
+            </p>
+          </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+          <div class="col-md-3">
+          <div class="bs-docs-sidebar hidden-print" role="complementary" id="affix_sidebar">
+            <ul class="nav bs-docs-sidenav">
+
+                <li><a href="#htmlStructure">HTML Structure</a></li>
+                <li><a href="#fileStructure">File structure</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#javascript">JavaScript</a></li>
+                <li><a href="#psdFiles">PSD Files</a></li>
+                <li><a href="#phpCodeExplanation">PHP Code Explanation</a></li>
+                <li><a href="#credits">Sources and Credits</a></li>
+                <li><a href="#license">License</a></li>
+                <li><a href="#top">Back to top</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+
+            <div class="bs-docs-section">
+                <h1 id="htmlStructure" class="page-header">HTML Structure</h1>
+
+                <p>The entire structure:</p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-US&quot; class=&quot;backgroundColor&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;author&quot; content=&quot;http://webnovant.com&quot;&gt;
+
+        &lt;title&gt;Coming soon Template - Designed by webnovant.com&lt;/title&gt;
+
+        &lt;link href=&#39;http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Lemon&#39; rel=&#39;stylesheet&#39; type=&#39;text/css&#39;&gt;
+
+        &lt;link rel=&quot;shortcut icon&quot; href=&quot;images/favicon.jpg&quot;&gt;
+
+        &lt;!-- CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/font-awesome.min.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/animate.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/YTPlayer.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/supersized.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/styles.css&quot; /&gt;
+
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;!-- Container --&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+
+                    &lt;div class=&quot;section clearfix&quot;&gt;
+                        &lt;h1 class=&quot;logo animated fadeInDown&quot; &gt;Company Name&lt;/h1&gt;
+
+                        &lt;!-- Cycle text --&gt;
+                        &lt;div id=&quot;text_slider&quot;&gt;
+                            &lt;div class=&quot;slide clearfix&quot;&gt;
+                                &lt;!-- First text --&gt;
+                                &lt;h2&gt;We are working on the new website&lt;/h2&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;slide clearfix&quot;&gt;
+                                &lt;!-- Second text --&gt;
+                                &lt;h2&gt;See you soon!&lt;/h2&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Cycle text --&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;!-- Countdown --&gt;
+                    &lt;div class=&quot;section clearfix animated fadeIn&quot; id=&quot;countdown&quot;&gt;
+                        &lt;!-- Days --&gt;
+                        &lt;div class=&quot;countdown_group&quot;&gt;
+                            &lt;span class=&quot;countdown_value&quot;&gt;{dnn}&lt;/span&gt; 
+                            &lt;span class=&quot;countdown_help&quot;&gt;{dl}&lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- Hours --&gt; 
+                        &lt;div class=&quot;countdown_group&quot;&gt;
+                            &lt;span class=&quot;countdown_value&quot;&gt;{hnn}&lt;/span&gt; 
+                            &lt;span class=&quot;countdown_help&quot;&gt;{hl}&lt;/span&gt;
+                        &lt;/div&gt; 
+
+                        &lt;!-- Minutes --&gt;
+                        &lt;div class=&quot;countdown_group&quot;&gt;
+                            &lt;span class=&quot;countdown_value&quot;&gt;{mnn}&lt;/span&gt; 
+                            &lt;span class=&quot;countdown_help&quot;&gt;{ml}&lt;/span&gt; 
+                        &lt;/div&gt;
+
+                        &lt;!-- Seconds --&gt;
+                        &lt;div class=&quot;countdown_group&quot;&gt;
+                            &lt;span class=&quot;countdown_value&quot;&gt;{snn}&lt;/span&gt; 
+                            &lt;span class=&quot;countdown_help&quot;&gt;{sl}&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- End Countdown --&gt;
+
+                    &lt;div class=&quot;section clearfix animated fadeIn&quot;&gt;
+                        &lt;p&gt;Want to be notified when the website is ready?&lt;/p&gt;
+                        &lt;form id=&quot;form_newsletter&quot;&gt;
+                            &lt;div class=&quot;row&quot;&gt;
+                                &lt;div class=&quot;col-md-6 col-md-offset-3&quot;&gt;
+                                    &lt;div class=&quot;input-group input-group-lg&quot;&gt;
+                                        &lt;input type=&quot;email&quot; name=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;Enter your email&quot; &gt;
+                                        &lt;span class=&quot;input-group-btn&quot;&gt;
+                                            &lt;button class=&quot;btn btn-default&quot; type=&quot;submit&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt; Notify me!&lt;/button&gt;
+                                        &lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+                                    &lt;div id=&quot;form_newsletter_result&quot;&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;section clearfix animated fadeIn&quot; id=&quot;contact&quot;&gt;
+                        &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-envelope-o&quot;&gt;&lt;/i&gt; email@ycompany.com&lt;/a&gt;
+                        &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; (+00) 123 4567&lt;/a&gt;
+                    &lt;/div&gt;
+
+
+                    &lt;div class=&quot;section clearfix&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;btn btn-transparent btn-facebook&quot;&gt;
+                            &lt;i class=&quot;fa fa-facebook fa-fw&quot;&gt;&lt;/i&gt;
+                        &lt;/a&gt;
+                        &lt;!-- Put here more social media links --&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;section clearfix&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;open_aboutus btn btn-transparent animated fadeInUp&quot;&gt;
+                            More about Our Company
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- End Container --&gt;
+
+        &lt;!-- Footer --&gt;
+        &lt;!-- Sticky footer --&gt;
+        &lt;div id=&quot;footer&quot;&gt;
+            &lt;p&gt;
+                Designed by &lt;a href=&quot;http://webnovant.com&quot; title=&quot;Webnovant&quot;&gt;webnovant.com&lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- End Footer --&gt;
+
+
+        &lt;!-- About Us --&gt;
+        &lt;!-- Not visible on page load --&gt;
+        &lt;div id=&quot;about_us&quot;&gt;
+
+            &lt;h1&gt;About us&lt;/h1&gt;
+
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    &lt;div class=&quot;col-lg-12&quot;&gt;
+                        &lt;p&gt;
+                            Here the text about us
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;a href=&quot;#&quot; class=&quot;close_aboutus btn btn-default&quot;&gt;
+                &lt;i class=&quot;fa fa-times-circle&quot;&gt;&lt;/i&gt; Close
+            &lt;/a&gt;
+
+        &lt;/div&gt;
+        &lt;!-- End About Us --&gt;
+
+		&lt;!-- JS --&gt;
+        &lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/jquery.plugin.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/jquery.countdown.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/jquery.cycle.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/supersized.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/jquery.mb.YTPlayer.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/scripts.js&quot;&gt;&lt;/script&gt;
+
+        &lt;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+        &lt;!--[if lt IE 9]&gt;
+        &lt;script src=&quot;js/html5shiv.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/respond.min.js&quot;&gt;&lt;/script&gt;
+        &lt;![endif]--&gt;
+		
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <hr>
+
+            <p>Simplified structure:</p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-US&quot; class=&quot;backgroundColor&quot;&gt;
+    &lt;head&gt;
+        &lt;!-- HERE META TAGS, CSS/JS DEPENDENCIES... --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Container --&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;!--HERE MAIN CONTENT --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- End Container --&gt;
+
+        &lt;!-- Footer --&gt;
+        &lt;!-- Sticky footer --&gt;
+        &lt;div id=&quot;footer&quot;&gt;
+            &lt;!--HERE CONTENT FOOTER --&gt;
+        &lt;/div&gt;
+        &lt;!-- End Footer --&gt;
+
+
+        &lt;!-- About Us --&gt;
+        &lt;!-- Not visible on page load --&gt;
+        &lt;div id=&quot;about_us&quot;&gt;
+            &lt;!--HERE CONTENT ABOUT US --&gt;
+        &lt;/div&gt;
+        &lt;!-- End About Us --&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <hr>
+
+            <p>Differences between versions:</p>
+
+            <hr>
+
+            <p><strong>background_color.html</strong></p>
+            <pre><code>&lt;html lang=&quot;en-US&quot; class=&quot;backgroundColor&quot;&gt;</code></pre>
+
+            <p><strong>background_image.html</strong></p>
+            <pre><code>&lt;html lang=&quot;en-US&quot; class=&quot;backgroundImage&quot;&gt;</code></pre>
+
+            <p><strong>background_slider.html</strong></p>
+            <pre><code>&lt;html lang=&quot;en-US&quot; class=&quot;backgroundSlider&quot;&gt;</code></pre>
+
+            <p><strong>background_video.html</strong></p>
+            <pre><code>&lt;html lang=&quot;en-US&quot; class=&quot;backgroundVideo&quot;&gt;</code></pre>
+
+            <p>This <i>class</i> affects some properties of the <i>css/styles.css</i> and <i>js/scripts.js</i> files.</p>
+            </div>
+
+
+
+
+            <div class="bs-docs-section">
+                <h1 id="fileStructure" class="page-header">File structure</h1>
+
+  
+<pre>soonweb/
+    │
+    ├── index.html <small><i>//Select version</i></small>
+    ├── background_color.html
+    ├── background_image.html
+    ├── background_slider.html
+    ├── background_video.html
+    │
+    ├── docs/ <small><i>//Documentation folder</i></small>
+    │
+    ├── css/
+    │   ├── YTPlayer.css <small><i>//Only for background video</i></small>
+    │   ├── animate.css
+    │   ├── bootstrap.min.css
+    │   ├── font-awesome.min.css
+    │   ├── styles.css
+    │   └── supersized.css <small><i>//Only for background images slider</i></small>
+    │
+    ├── fonts/
+    │   └── otf, eot, svg, ttf and woff files (fontawesome)
+    │
+    ├── images/
+    │   └── bg1.jpg, bg2.jpg, bg3.jpg, bg4.jpg, favicon.jpg
+    │
+    └── js/
+        ├── bootstrap.min.js
+        ├── html5shiv.js
+        ├── jquery.countdown.min.js
+        ├── jquery.cycle.min.js
+        ├── jquery.min.js
+        ├── jquery.plugin.js
+        ├── jquery.mb.YTPlayer.js <small><i>//Only for background video</i></small>
+        ├── respond.min.js
+        ├── scripts.js
+        └── supersized.min.js <small><i>//Only for background images slider</i></small>
+</pre>
+
+
+            </div>
+
+            <div class="bs-docs-section">
+                <h1 id="css" class="page-header">CSS</h1>
+
+                <p>Inside <i>&lt;head&gt;</i> tag load dependencies:</p>
+                
+<pre><code>&lt;!-- CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/font-awesome.min.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/animate.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/YTPlayer.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/supersized.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/styles.css&quot; /&gt;</code></pre>
+    
+                <p>Our custom file is <i>css/styles.css</i>.</p>
+                <hr>
+                <p>Some style properties depend on attribute <i>class</i> of HTML tag:</p>
+                
+<p>Set background color on <strong>background_color.html</strong></p>
+
+<pre><code>.backgroundColor body 
+{
+    background: #16a085; /* Our flat color for background */
+}</code></pre>
+
+<p>Set background image on <strong>background_image.html</strong></p>  
+
+<pre><code>.backgroundImage body 
+{
+    /* Full background image */
+    background: url('../images/bg1.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}</code></pre>
+
+<p>Set background gradient on footer. Only this versions: <strong>background_image.html, background_slider.html, background_video.html</strong></p>  
+      
+<pre><code>.backgroundImage #footer, 
+.backgroundSlider #footer,
+.backgroundVideo #footer
+{
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+
+}</code></pre>
+                
+            </div>
+
+
+
+            <div class="bs-docs-section">
+                <h1 id="javascript" class="page-header">Javascript</h1>
+
+                <p>Before close <i>&lt;body&gt;</i> tag, load dependencies:</p>
+                
+<pre><code>&lt;!-- JS --&gt;
+&lt;script src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jquery.plugin.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jquery.countdown.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/supersized.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jquery.cycle.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jquery.mb.YTPlayer.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/scripts.js&quot;&gt;&lt;/script&gt;</code></pre>
+    
+                <p>Our custom file is <i>js/scripts.js</i>, where you can set all plugins you need:</p>
+                
+<pre><code>$(function () {
+    
+    //Background images slider
+    $('.backgroundSlider #backgroundImages').supersized({
+        slide_interval : 4000, // Length between transitions
+        transition : 1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+        transition_speed : 900, // Speed of transition
+        slide_links : false, // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+        slides : [
+            {image : 'images/bg1.jpg', title : '', thumb : '', url : ''},
+            {image : 'images/bg2.jpg', title : '', thumb : '', url : ''},
+            {image : 'images/bg3.jpg', title : '', thumb : '', url : ''},
+            {image : 'images/bg4.jpg', title : '', thumb : '', url : ''},
+        ]
+    });
+
+    //Background video
+    //See all setting options here: http://pupunzi.com/
+    var autoplay = false;
+    if($(window).width() >= 992)
+    {
+        autoplay = true;
+        $(&quot;#bgndVideo&quot;).mb_YTPlayer();
+    }
+    
+
+    //Countdown
+    $(&quot;#countdown&quot;).countdown({
+        until: someDate, 
+        padZeroes: true,
+        layout: $(&quot;#countdown&quot;).html()
+    });
+
+    //Submit Newsletter form to PHP file
+    $(&quot;#form_newsletter&quot;).submit(function(event) {
+
+            //stop form from submitting normally
+            event.preventDefault();
+
+            //get some values from elements on the page:
+            var $form = $( this );
+
+            $(&quot;#form_newsletter button&quot;).attr(&quot;disabled&quot;, &quot;disabled&quot;);
+
+            //Send the data using post
+            var posting = $.post( 'process_form.php', $form.serialize() );
+
+            //Show result
+            posting.done(function( data ) {
+
+                    $(&quot;#form_newsletter button&quot;).removeAttr('disabled');
+
+                    $(&quot;#form_newsletter_result&quot;).hide().html(data).fadeIn();
+            });
+    });
+
+    //About us (Open / Close)
+    $(&quot;.open_aboutus&quot;).click(function() {
+        $(&quot;#about_us&quot;).removeClass('animated fadeOut').addClass('animated fadeIn').fadeIn();
+    });
+
+    $(&quot;.close_aboutus&quot;).click(function() {
+        $(&quot;#about_us&quot;).removeClass('animated fadeIn').addClass('animated fadeOut').fadeOut();
+    });
+		
+});
+
+//Countdown for demo. Always add 18 days
+var someDate = new Date();
+var numberOfDaysToAdd = 18;
+someDate.setDate(someDate.getDate() + numberOfDaysToAdd); 
+
+//Countdown with real date
+//var someDate = new Date(&quot;November 13, 2015 23:59:59&quot;);
+//someDate.setDate(someDate.getDate()); </code></pre>
+            </div>
+
+
+
+
+            <div class="bs-docs-section">
+                <h1 id="psdFiles" class="page-header">PSD Files</h1>
+
+                <p>No PSD files included</p>
+            </div>
+
+
+
+            <div class="bs-docs-section">
+                <h1 id="phpCodeExplanation" class="page-header">PHP code explanation</h1>
+
+                <p>File <u>/process_form.php</u> receives and process Newsletter Form, sended via AJAX from file <u>/js/scripts.js</u> </p>
+                <p>It must be completed with PHP code to save subscriber in a database, or send a confirmation email to subscriber, for example.</p>
+    
+<pre><code>&lt;?php
+//PROCESS NEWSLETTER FORM HERE
+
+if(!isset($_POST) || !isset($_POST['email']))
+{ 
+    $msg = 'No data has been received.';
+    echo '&lt;div class=&quot;alert alert-danger&quot;&gt;&lt;p&gt;&lt;i class=&quot;fa fa-exclamation-triangle&quot;&gt;&lt;/i&gt; '.$msg.'&lt;/p&gt;&lt;/div&gt;';
+    return false;
+}
+
+if($_POST['email'] == '')
+{
+    //ERROR: FIELD &quot;email&quot; EMPTY
+    $msg = 'Please enter a valid email.';
+    echo '&lt;div class=&quot;alert alert-danger&quot;&gt;&lt;p&gt;&lt;i class=&quot;fa fa-exclamation-triangle&quot;&gt;&lt;/i&gt; '.$msg.'&lt;/p&gt;&lt;/div&gt;';
+    return false;
+}
+
+///////////////////////////////////////////////
+//Now yo can save subscriber in your database//
+//And send confirmation email if necessary...//
+///////////////////////////////////////////////
+
+//Option 1) Send confirmation email. More info here: http://php.net/manual/es/function.mail.php
+
+/*
+mail(&quot;my_email@exemple.com&quot;,&quot;New subscriber&quot;,&quot;Email: &quot;.$_POST[&apos;email&apos;]);
+*/
+
+//Option 2) Save subscriber on TXT file. More info here: http://www.w3schools.com/php/php_file_create.asp
+
+/*
+$myfile = fopen(&quot;subscribers.txt&quot;, &quot;a&quot;) or die(&quot;Unable to open file!&quot;);
+$txt = $_POST[&apos;email&apos;].&quot;\n&quot;;
+fwrite($myfile, $txt);
+fclose($myfile);
+*/
+
+//And send success message:
+$msg = 'Your email has been saved successfully.';
+echo '&lt;div class=&quot;alert alert-success&quot;&gt;&lt;p&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt; '.$msg.'&lt;/p&gt;&lt;/div&gt;';
+return true;
+
+?&gt;
+</code></pre>
+    
+            </div>
+
+            <div class="bs-docs-section">
+                <h1 id="credits" class="page-header">Sources and Credits</h1>
+
+                <p>I've used the following images, icons or other files as listed.</p>
+                <ul>
+                    <li>jQuery - By jQuery Foundation, Inc - <a target="_blank" href="https://jquery.org/">jquery.org</a> - Licensed under MIT</li>
+                    <li>Animate.css - By Daniel Eden - <a target="_blank" href="http://daneden.me/animate">daneden.me/animate</a> - Licensed under MIT</li>
+                    <li>Bootstrap - <a target="_blank" href="http://getbootstrap.com">getbootstrap.com</a> - Licensed under MIT</li>
+                    <li>Font Awesome - By @davegandy - <a target="_blank" href="http://fontawesome.io">fontawesome.io</a> - <a target="_blank" href="http://fontawesome.io/license">License</a></li>
+                    <li>Supersized - Fullscreen Slideshow jQuery Plugin - Author: Sam Dunn - Company : One Mighty Roar (<a target="_blank" href="http://www.onemightyroar.com">www.onemightyroar.com</a>) - <a target="_blank" href="http://www.buildinternet.com/project/supersized">www.buildinternet.com/project/supersized</a> - Licensed under MIT / GPL</li>
+                    <li>Countdown for jQuery - By Keith Wood - <a target="_blank" href="http://keith-wood.name/countdown.html">keith-wood.name/countdown.html</a> - Licensed under MIT</li>
+                    <li>jquery.plugin.js - Simple JavaScript Inheritance - By John Resig - <a target="_blank" href="http://ejohn.org/">ejohn.org</a> - Licensed under MIT</li>
+                    <li>jQuery Cycle2 - By M. Alsup - <a target="_blank" href="http://jquery.malsup.com/cycle2/">jquery.malsup.com/cycle2</a> - Licences: MIT/GPL</li>
+                    <li>jquery.mb.YTPlayer.js - By Open Lab s.r.l. - <a target="_blank" href="http://pupunzi.com">pupunzi.com</a> - Licensed under MIT/GPL</li>
+                    <li>Images <i>bg1.jpg, bg2.jpg, bg3.jpg, bg4.jpg</i> from <a target="_blank" href="http://unsplash.com/">unsplash.com</a> - Licensed under CC0 - Public Domain Dedication
+                    <li>Video by <a target="_blank" href="https://www.facebook.com/justinngphoto">Justin Ng</a> - Original video here: <a target="_blank" href="https://www.youtube.com/watch?v=UNs7TkFvK-4">youtube.com/watch?v=UNs7TkFvK-4</a> - Creative Commons License
+                </ul>
+            </div>
+            
+            <div class="bs-docs-section">
+                <h1 id="license" class="page-header">License</h1>
+
+                <p>
+                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Soonweb: Coming Soon Template</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://webnovant.com" property="cc:attributionName" rel="cc:attributionURL">Webnovant</a> is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>.
+                </p>
+                
+            </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+
+
+    <footer class="bs-docs-footer" role="contentinfo">
+        <div class="container">
+            <p>Designed by <a href="http://webnovant.com" target="_blank">webnovant.com</a></p>
+        </div>
+    </footer>
+
+  </body>
+</html>

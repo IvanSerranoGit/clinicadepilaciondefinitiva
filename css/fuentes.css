@@ -1,0 +1,13 @@
+@font-face {
+
+font-family: 'Apple Chancery'; 
+src: url('fuentes/Apple Chancery.ttf');
+
+} 
+
+h1
+{
+    font-size: 50px;
+    padding-top: 90px;
+    font-family: 'Apple Chancery'; 
+}
